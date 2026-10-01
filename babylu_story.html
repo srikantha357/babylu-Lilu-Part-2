@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Babylu.exe Has Stopped Working ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    min-height:100vh;
+
+    font-family:Poppins,sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            #ffd6e7,
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            #ddd2ff,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #f8f3ff
+        );
+
+    color:#3e2940;
+
+    overflow-x:hidden;
+}
+
+
+button{
+    font-family:inherit;
+}
+
+
+/* ============================= */
+/* MAIN APP */
+/* ============================= */
+
+.app{
+
+    width:min(1050px,94%);
+
+    margin:25px auto;
+}
+
+
+.card{
+
+    min-height:720px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(100,50,90,.18);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    overflow:hidden;
+}
+
+
+/* ============================= */
+/* TOP */
+/* ============================= */
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:25px 35px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#a06f91;
+}
+
+
+#counter{
+    color:#ff6da6;
+}
+
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+
+.content{
+
+    min-height:590px;
+
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
+    align-items:center;
+
+    padding:20px 60px;
+}
+
+
+/* ============================= */
+/* CHARACTER AREA */
+/* ============================= */
+
+.character-zone{
+
+    height:470px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:visible;
+}
+
+
+/* Background circle */
+
+.character-zone::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0ed,
+            #e9ddff
+        );
+
+    box-shadow:
+        0 20px 45px rgba(120,80,130,.12);
+}
+
+
+/* Character wrapper */
+
+.character{
+
+    position:relative;
+
+    width:360px;
+
+    height:430px;
+
+    z-index:3;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+
+/* YOUR ACTUAL ANIME IMAGE */
+
+.babylu-image{
+
+    position:relative;
+
+    z-index:3;
+
+    width:min(360px,100%);
+
+    max-height:430px;
+
+    object-fit:contain;
+
+    border-radius:28px;
+
+    filter:
+        drop-shadow(
+            0 18px 18px
+            rgba(70,40,70,.18)
+        );
+
+    transform-origin:50% 85%;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+
+/* ============================= */
+/* CHARACTER ANIMATIONS */
+/* ============================= */
+
+
+/* Cute / happy */
+
+.character.happy .babylu-image{
+
+    animation:
+        happyImage
+        1.1s
+        infinite
+        alternate
+        ease-in-out;
+}
+
+
+@keyframes happyImage{
+
+    from{
+
+        transform:
+            translateY(0)
+            rotate(-1deg);
+    }
+
+    to{
+
+        transform:
+            translateY(-10px)
+            rotate(1deg);
+    }
+}
+
+
+/* Bossy */
+
+.character.boss .babylu-image{
+
+    transform:
+        rotate(2deg)
+        scale(1.03);
+
+}
+
+
+/* Angry */
+
+.character.angry .babylu-image{
+
+    animation:
+        angryImage
+        .18s
+        infinite
+        alternate;
+}
+
+
+@keyframes angryImage{
+
+    from{
+
+        transform:
+            translateX(-5px)
+            rotate(-1deg);
+    }
+
+    to{
+
+        transform:
+            translateX(5px)
+            rotate(1deg);
+    }
+}
+
+
+/* Dance */
+
+.character.dance .babylu-image{
+
+    animation:
+        danceImage
+        .42s
+        infinite
+        alternate
+        ease-in-out;
+}
+
+
+@keyframes danceImage{
+
+    0%{
+
+        transform:
+            translateY(5px)
+            rotate(-7deg)
+            scale(.98);
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px)
+            rotate(7deg)
+            scale(1.04);
+    }
+
+    100%{
+
+        transform:
+            translateY(2px)
+            rotate(-5deg)
+            scale(1);
+    }
+
+}
+
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.text{
+
+    padding:
+        20px
+        10px
+        20px
+        35px;
+}
+
+
+.eyebrow{
+
+    color:#ff6fa8;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+}
+
+
+h1{
+
+    font-family:
+        "Baloo 2",
+        sans-serif;
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.2rem
+        );
+
+    line-height:.95;
+
+    margin-bottom:25px;
+}
+
+
+.description{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#654f60;
+}
+
+
+.extra{
+
+    margin-top:22px;
+
+    color:#ff6fa8;
+
+    font-weight:800;
+}
+
+
+/* ============================= */
+/* PROGRESS */
+/* ============================= */
+
+.progress{
+
+    height:7px;
+
+    margin:
+        0 60px;
+
+    background:#f1e3ec;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+
+.progress-bar{
+
+    height:100%;
+
+    width:14%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6fa8,
+            #9a82ff
+        );
+
+    transition:.5s;
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:
+        22px
+        60px
+        30px;
+}
+
+
+.btn{
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:
+        14px
+        24px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.btn:hover{
+
+    transform:
+        translateY(-3px);
+}
+
+
+.primary{
+
+    background:#402b40;
+
+    color:white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(60,40,60,.2);
+}
+
+
+.secondary{
+
+    background:white;
+
+    color:#402b40;
+
+    border:
+        1px solid
+        #eadde6;
+}
+
+
+.btn:disabled{
+
+    opacity:.4;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+
+/* ============================= */
+/* FINALE */
+/* ============================= */
+
+.finale{
+
+    min-height:720px;
+
+    text-align:center;
+
+    padding:55px 25px;
+}
+
+
+.hidden{
+
+    display:none;
+}
+
+
+.badge{
+
+    display:inline-block;
+
+    background:white;
+
+    border:
+        1px solid
+        #eadde6;
+
+    padding:
+        8px
+        15px;
+
+    border-radius:50px;
+
+    color:#ff6fa8;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+
+.finale h2{
+
+    font-family:"Baloo 2";
+
+    font-size:5rem;
+
+    line-height:.9;
+
+    margin:
+        25px
+        0
+        10px;
+}
+
+
+.verdict{
+
+    font-family:"Baloo 2";
+
+    color:#ff6fa8;
+
+    font-size:28px;
+
+    font-weight:900;
+}
+
+
+/* ============================= */
+/* STATS */
+/* ============================= */
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:30px 0;
+}
+
+
+.stat{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:
+        15px
+        20px;
+
+    min-width:150px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(80,50,80,.08);
+}
+
+
+.stat strong{
+
+    display:block;
+
+    font-size:24px;
+}
+
+
+.stat span{
+
+    font-size:12px;
+
+    color:#846c7c;
+
+    font-weight:700;
+}
+
+
+/* ============================= */
+/* DANCE FLOOR */
+/* ============================= */
+
+.dance-floor{
+
+    height:300px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+
+.dance-floor::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+
+    height:120px;
+
+    background:#e9ddff;
+
+    border-radius:50%;
+
+    bottom:20px;
+}
+
+
+/* Dancing character */
+
+.dancing-character{
+
+    width:300px;
+
+    height:270px;
+
+    z-index:3;
+}
+
+
+.dancing-character .babylu-image{
+
+    width:250px;
+
+    max-height:270px;
+}
+
+
+/* Music note */
+
+.music{
+
+    position:absolute;
+
+    top:10px;
+
+    right:30%;
+
+    font-size:45px;
+
+    color:#ff6fa8;
+
+    animation:
+        music
+        1s
+        infinite
+        alternate;
+}
+
+
+@keyframes music{
+
+    to{
+
+        transform:
+            translate(
+                15px,
+                -20px
+            )
+            rotate(15deg);
+    }
+}
+
+
+/* ============================= */
+/* FINAL BUTTON */
+/* ============================= */
+
+.final-buttons{
+
+    margin-top:10px;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:750px){
+
+    .card{
+
+        min-height:850px;
+    }
+
+
+    .content{
+
+        grid-template-columns:1fr;
+
+        padding:
+            5px
+            25px;
+    }
+
+
+    .character-zone{
+
+        height:340px;
+    }
+
+
+    .character{
+
+        width:300px;
+
+        height:330px;
+    }
+
+
+    .babylu-image{
+
+        width:290px;
+
+        max-height:330px;
+    }
+
+
+    .text{
+
+        text-align:center;
+
+        padding:
+            10px
+            5px
+            25px;
+    }
+
+
+    h1{
+
+        font-size:3.3rem;
+    }
+
+
+    .description{
+
+        font-size:15px;
+    }
+
+
+    .progress{
+
+        margin:
+            0
+            25px;
+    }
+
+
+    .buttons{
+
+        padding:
+            20px
+            25px
+            25px;
+    }
+
+
+    .finale h2{
+
+        font-size:3.7rem;
+    }
+
+
+    .dancing-character{
+
+        width:260px;
+
+        height:250px;
+    }
+
+
+    .dancing-character
+    .babylu-image{
+
+        width:220px;
+
+        max-height:240px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<!-- ============================= -->
+<!-- STORY CARD -->
+<!-- ============================= -->
+
+<section
+    class="card"
+    id="story"
+>
+
+
+    <!-- TOP -->
+
+    <div class="top">
+
+        <span id="chapter">
+            BABYLU UNIVERSE
+        </span>
+
+        <span id="counter">
+            1 / 7
+        </span>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+
+        <!-- ============================= -->
+        <!-- CHARACTER -->
+        <!-- ============================= -->
+
+        <div class="character-zone">
+
+
+            <div
+                class="character"
+                id="babylu"
+            >
+
+                <!--
+                    IMPORTANT:
+
+                    Keep babylu.jpg
+                    in the same folder
+                    as this HTML file.
+                -->
+
+                <img
+                    class="babylu-image"
+                    src="babylu.jpg"
+                    alt="Babylu anime character"
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ============================= -->
+        <!-- STORY TEXT -->
+        <!-- ============================= -->
+
+        <div class="text">
+
+
+            <div
+                class="eyebrow"
+                id="eyebrow"
+            >
+                THE INNOCENT ONE
+            </div>
+
+
+            <h1 id="title">
+
+                Meet Babylu… 🥺💕
+
+            </h1>
+
+
+            <div
+                class="description"
+                id="description"
+            >
+            </div>
+
+
+            <div
+                class="extra"
+                id="extra"
+            >
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- PROGRESS -->
+    <!-- ============================= -->
+
+    <div class="progress">
+
+        <div
+            class="progress-bar"
+            id="progress"
+        >
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- BUTTONS -->
+    <!-- ============================= -->
+
+    <div class="buttons">
+
+
+        <button
+            class="btn secondary"
+            id="back"
+        >
+
+            ← Back
+
+        </button>
+
+
+
+        <button
+            class="btn primary"
+            id="next"
+        >
+
+            Discover →
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ============================= -->
+<!-- FINALE -->
+<!-- ============================= -->
+
+<section
+    class="card finale hidden"
+    id="finale"
+>
+
+
+    <div class="badge">
+
+        THE COURT OF LILU ⚖️
+
+    </div>
+
+
+
+    <h2>
+
+        THE VERDICT
+
+    </h2>
+
+
+
+    <div class="verdict">
+
+        BABYLU IS BOTH.
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- STATS -->
+    <!-- ============================= -->
+
+    <div class="stats">
+
+
+        <div class="stat">
+
+            <strong>
+                50%
+            </strong>
+
+            <span>
+                Kuchu Puchu 🧸
+            </span>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <strong>
+                50%
+            </strong>
+
+            <span>
+                Pagal Queen 👑
+            </span>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Lilu's Babylu ❤️
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- DANCE -->
+    <!-- ============================= -->
+
+    <div class="dance-floor">
+
+
+        <div class="music">
+
+            ♪
+
+        </div>
+
+
+
+        <div
+            class="character
+                   dancing-character
+                   dance"
+        >
+
+            <img
+                class="babylu-image"
+                src="babylu.jpg"
+                alt="Dancing Babylu"
+            >
+
+        </div>
+
+
+    </div>
+
+
+
+    <p
+        style="
+            font-family:'Baloo 2';
+            font-size:22px;
+            font-weight:800;
+        "
+    >
+
+        “Rama Sami Ki…
+        Muthu Swami Ki…” 🎵
+
+    </p>
+
+
+
+    <p
+        style="
+            margin:10px auto 20px;
+            color:#806c7a;
+        "
+    >
+
+        Babylu has officially entered
+        <b>PAGAL DANCE MODE.</b>
+
+    </p>
+
+
+
+    <button
+        class="btn primary"
+        id="restart"
+    >
+
+        ↻ Make Her Pagal Again
+
+    </button>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- ============================= -->
+<!-- JAVASCRIPT -->
+<!-- ============================= -->
+
+<script>
+
+
+/* ============================= */
+/* STORY DATA */
+/* ============================= */
+
+const scenes = [
+
+
+/* ============================= */
+/* SCENE 1 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "THE INNOCENT ONE",
+
+
+    title:
+        "Meet Babylu… 🥺💕",
+
+
+    description:`
+
+        To everyone else,
+        she looks like a
+        <b>Kuchu Puchu.</b>
+
+        <br><br>
+
+        Cute.
+        <br>
+
+        Innocent.
+        <br>
+
+        Sweet.
+        <br>
+
+        Adorable.
+
+        <br><br>
+
+        But Lilu knows the
+        <b>REAL</b>
+        Babylu.
+
+    `,
+
+
+    extra:
+        "⚠️ Proceed at your own risk.",
+
+
+    animation:
+        "happy"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 2 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "PAGAL HABIT #01",
+
+
+    title:
+        "Bossy Babylu 👑",
+
+
+    description:`
+
+        <b>
+            “Lilu… come here.”
+        </b>
+
+        <br><br>
+
+        “Why?”
+
+        <br>
+
+        “Just come.”
+
+        <br><br>
+
+        “Okay…”
+
+        <br>
+
+        “Why did you take so long?”
+
+        😭
+
+    `,
+
+
+    extra:
+        "Boss Level: ██████████ 100%",
+
+
+    animation:
+        "boss"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 3 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "PAGAL HABIT #02",
+
+
+    title:
+        "Irritation Department 😤",
+
+
+    description:`
+
+        “Lilu…”
+
+        <br><br>
+
+        “Hmm?”
+
+        <br><br>
+
+        “Nothing.”
+
+        <br><br>
+
+        Five seconds later…
+
+        <br><br>
+
+        <b>
+            “LILUUUUUUUU!”
+        </b>
+
+    `,
+
+
+    extra:
+        "PhD in irritating Lilu 🎓",
+
+
+    animation:
+        "angry"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 4 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "THE K̶U̶C̶H̶U̶ P̶U̶C̶H̶U̶ TRAP",
+
+
+    title:
+        "The Cute Weapon 🧸",
+
+
+    description:`
+
+        Big innocent eyes.
+
+        <br>
+
+        Little blush.
+
+        <br><br>
+
+        <b>
+            “Lilu 🥺👉👈”
+        </b>
+
+        <br><br>
+
+        Lilu immediately melts.
+
+        <br><br>
+
+        Then comes…
+
+        <b>
+            one tiny favour.
+        </b>
+
+        <br><br>
+
+        Then another.
+
+        <br>
+
+        Then another.
+
+        <br><br>
+
+        😭
+
+    `,
+
+
+    extra:
+        "And somehow… she gets away with EVERYTHING.",
+
+
+    animation:
+        "happy"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 5 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "⚠️ DANGER: PAGAL MODE",
+
+
+    title:
+        "THE DANCE INCIDENT 🕺",
+
+
+    description:`
+
+        Lilu has discovered Babylu's
+        <b>
+            most dangerous habit.
+        </b>
+
+        <br><br>
+
+        She doesn't dance elegantly.
+
+        <br>
+
+        She doesn't dance normally.
+
+        <br><br>
+
+        She dances with
+
+        <br>
+
+        <b>
+            PURE PAGAL ENERGY.
+        </b>
+
+        😂
+
+    `,
+
+
+    extra:
+        "Babylu: “Because I CAN. 😎”",
+
+
+    animation:
+        "dance"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 6 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "PAGAL MODE ACTIVATED",
+
+
+    title:
+        "47 Different Babylus 🤪",
+
+
+    description:`
+
+        Hungry Babylu:
+
+        <b>
+            “Lilu 😡”
+        </b>
+
+        <br><br>
+
+        Sleepy Babylu:
+
+        <b>
+            “Don't talk to me.”
+        </b>
+
+        <br><br>
+
+        Ignored Babylu:
+
+        <b>
+            “LILUUUUUU!”
+        </b>
+
+        <br><br>
+
+        Fast-reply Babylu:
+
+        <b>
+            “Why are you replying so fast?”
+        </b>
+
+    `,
+
+
+    extra:
+        "Lilu: “WHAT DO YOU WANT FROM ME 😭”",
+
+
+    animation:
+        "dance"
+
+},
+
+
+
+/* ============================= */
+/* SCENE 7 */
+/* ============================= */
+
+{
+
+    eyebrow:
+        "THE REAL REASON",
+
+
+    title:
+        "But Lilu Still Loves Her ❤️",
+
+
+    description:`
+
+        Yes…
+
+        <br>
+
+        she's bossy.
+
+        <br>
+
+        She irritates me.
+
+        <br>
+
+        She randomly dances like a kid.
+
+        <br>
+
+        She has approximately
+        <b>
+            47 different pagal modes.
+        </b>
+
+        <br><br>
+
+        But she's also
+
+        <b>
+            my favorite person.
+        </b>
+
+    `,
+
+
+    extra:
+        "Because that's my Babylu. ❤️",
+
+
+    animation:
+        "happy"
+
+}
+
+
+];
+
+
+
+/* ============================= */
+/* CURRENT SCENE */
+/* ============================= */
+
+let current = 0;
+
+
+
+/* ============================= */
+/* ELEMENTS */
+/* ============================= */
+
+const babylu =
+    document.getElementById(
+        "babylu"
+    );
+
+
+const eyebrow =
+    document.getElementById(
+        "eyebrow"
+    );
+
+
+const title =
+    document.getElementById(
+        "title"
+    );
+
+
+const description =
+    document.getElementById(
+        "description"
+    );
+
+
+const extra =
+    document.getElementById(
+        "extra"
+    );
+
+
+const counter =
+    document.getElementById(
+        "counter"
+    );
+
+
+const progress =
+    document.getElementById(
+        "progress"
+    );
+
+
+const next =
+    document.getElementById(
+        "next"
+    );
+
+
+const back =
+    document.getElementById(
+        "back"
+    );
+
+
+const story =
+    document.getElementById(
+        "story"
+    );
+
+
+const finale =
+    document.getElementById(
+        "finale"
+    );
+
+
+
+/* ============================= */
+/* RENDER SCENE */
+/* ============================= */
+
+function render(){
+
+
+    const scene =
+        scenes[current];
+
+
+    eyebrow.innerHTML =
+        scene.eyebrow;
+
+
+    title.innerHTML =
+        scene.title;
+
+
+    description.innerHTML =
+        scene.description;
+
+
+    extra.innerHTML =
+        scene.extra;
+
+
+    counter.innerHTML =
+        (current + 1)
+        + " / "
+        + scenes.length;
+
+
+    progress.style.width =
+        (
+            (current + 1)
+            /
+            scenes.length
+            *
+            100
+        )
+        + "%";
+
+
+    /* Reset animation */
+
+    babylu.className =
+        "character";
+
+
+    /* Apply current animation */
+
+    if(scene.animation){
+
+        babylu.classList.add(
+            scene.animation
+        );
+
+    }
+
+
+    /* Back button */
+
+    back.disabled =
+        current === 0;
+
+
+    /* Next button */
+
+    if(
+        current ===
+        scenes.length - 1
+    ){
+
+        next.innerHTML =
+            "See The Verdict ⚖️";
+
+    }
+
+    else{
+
+        next.innerHTML =
+            "Next Pagal Habit →";
+
+    }
+
+}
+
+
+
+/* ============================= */
+/* NEXT BUTTON */
+/* ============================= */
+
+next.onclick = function(){
+
+
+    if(
+        current <
+        scenes.length - 1
+    ){
+
+        current++;
+
+        render();
+
+    }
+
+    else{
+
+        /* Hide story */
+
+        story.classList.add(
+            "hidden"
+        );
+
+
+        /* Show finale */
+
+        finale.classList.remove(
+            "hidden"
+        );
+
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+};
+
+
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+back.onclick = function(){
+
+
+    if(current > 0){
+
+        current--;
+
+        render();
+
+    }
+
+};
+
+
+
+/* ============================= */
+/* RESTART */
+/* ============================= */
+
+document
+.getElementById("restart")
+.onclick = function(){
+
+
+    current = 0;
+
+
+    finale.classList.add(
+        "hidden"
+    );
+
+
+    story.classList.remove(
+        "hidden"
+    );
+
+
+    render();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+};
+
+
+
+/* ============================= */
+/* START */
+/* ============================= */
+
+render();
+
+
+</script>
+
+
+</body>
+
+</html>
